@@ -22,8 +22,8 @@ public class InventoryController
 
     @GetMapping
     @ResponseStatus( HttpStatus.OK )
-    public boolean placeOrder( @RequestParam String skuCode, @RequestParam Integer quantity )
+    public boolean isInStock( @RequestParam String skuCode, @RequestParam Integer quantity )
     {
-        return inventoryService.isStock( skuCode, quantity );
+        return inventoryService.isInStock( skuCode, quantity );
     }
 }
